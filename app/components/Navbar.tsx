@@ -13,13 +13,13 @@ const Navbar = () => {
             <div className="h-full w-4/5">
                 <ul className="h-full w-full flex items-center justify-around text-2xl">
                     <li className="h-full flex items-center justify-center text-center" onClick={() => router.push("/about-me")}>
-                        About Me
+                        About
                     </li>
                     <li className="h-full flex items-center justify-center text-center" onClick={() => router.push("/projects")}>
                         Projects
                     </li>
                     <li className="h-full flex items-center justify-center text-center" onClick={() => router.push("contact-me")}>
-                        Contact Me
+                        Contact
                     </li>
                 </ul>
             </div>            
