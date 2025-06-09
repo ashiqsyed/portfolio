@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+const axios = require("axios");
 
 export default function ContactMe() {
     const [fullName, setFullName] = useState<string>("");
@@ -25,25 +26,44 @@ export default function ContactMe() {
         setMessage(e.target.value);
     }
 
-    type MessageData = {
-        fullName: string,
-        senderEmail: string,
-        message: string
-    }
+
     const handleSubmit = (e: any) => {
         e.preventDefault();
+        if (fullName == '' || senderEmail == '' || message == '') {
+            alert("Fill out the whole form")
+        } else {
+            
+            setFullName("");
+            setSenderEmail("");
+            setMessage("");
+            axios.post("http://localhost:3000/api/send", JSON.stringify({fullName, senderEmail, message}))
+            .then((res) => {
+                console.log(res.data)
+                alert("Message successfully sent!")
+            })
+            .catch((err) => {
+                console.log(err);
+                alert("There was an error sending the message");
+            });
+            
+            
+            // axios.post("/api/send", formData, {
+            //     headers: {
+            //         "Content-Type": "application/json"
+            //     },                
+            // }).then(res => {
+            //     res.json()
+            // }).then(data => {
+            //     alert("Message sent!")
+            //     console.log("Message sent", data);
+            // }).catch(error => {
+            //     alert("Error sending message")
+            //     console.log("Error sending message", error);
+            // })
+            fetch("/api/send", )
 
-        const formData: MessageData = {
-            fullName,
-            senderEmail,
-            message
         }
-        setFullName("");
-        setSenderEmail("");
-        setMessage("");
-        console.log("Call /api/send/ (serverless api/function) that calls Resend api")
-        console.log("Email: ");
-        console.log(formData);
+        
 
 
         
@@ -63,7 +83,7 @@ export default function ContactMe() {
                                 speed={50}
                                 
                             />
-            </h1>
+                        </h1>
                         <p className="text-sm">Please feel free to reach out and send me a message, or connect with me on <Link href="https://github.com/ashiqsyed">Linkedin</Link></p>
                     </div>
                     
