@@ -4,7 +4,6 @@ import Link from "next/link";
 import {TypeAnimation} from 'react-type-animation';
 import './globals.css'
 
-import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
