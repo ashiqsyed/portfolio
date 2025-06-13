@@ -47,20 +47,7 @@ export default function ContactMe() {
             });
             
             
-            // axios.post("/api/send", formData, {
-            //     headers: {
-            //         "Content-Type": "application/json"
-            //     },                
-            // }).then(res => {
-            //     res.json()
-            // }).then(data => {
-            //     alert("Message sent!")
-            //     console.log("Message sent", data);
-            // }).catch(error => {
-            //     alert("Error sending message")
-            //     console.log("Error sending message", error);
-            // })
-            fetch("/api/send", )
+            
 
         }
         
@@ -69,8 +56,8 @@ export default function ContactMe() {
         
     }
     return (
-        <div className="bg-gray-900 text-white h-screen w-full flex items-center justify-center">
-            <Card className="h-1/2 w-1/3 p-8">
+        <div className="bg-gray-900 text-white h-screen min-h-screen w-full flex items-center justify-center">
+            <Card className="sm:h-1/2 sm:w-1/3 p-8 m-4 md:max-xl:w-3/4 ">
                 <CardContent className="h-full w-full">
                     <div className="w-full h-2/12">
                         <h1 className="text-2xl">
@@ -84,10 +71,10 @@ export default function ContactMe() {
                                 
                             />
                         </h1>
-                        <p className="text-sm">Please feel free to reach out and send me a message, or connect with me on <Link href="https://github.com/ashiqsyed">Linkedin</Link></p>
+                        <p className="text-sm">Please feel free to reach out and send me a message, or connect with me on <Link href="https://www.linkedin.com/in/ashiq-syed-b88579239" target="_blank" className="underline text-blue-500 hover:text-blue-400">Linkedin</Link></p>
                     </div>
                     
-                    <form onSubmit={handleSubmit} className="w-full h-10/12">
+                    <form onSubmit={handleSubmit} className="w-full h-10/12 flex items-center flex-col">
                         
                             <div className="mt-4 mb-2 w-full h-1/6">
                                 <label htmlFor="fullName">Full Name</label>

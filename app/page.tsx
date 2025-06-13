@@ -24,8 +24,8 @@ export default function Home() {
           </div>
           <div className="text-3xl text-center mt-4 mb-4">Recent computer science graduate from the University of Georgia</div>
           <div className=" w-3/4 flex items-center justify-around text-3xl mt-4 sm:flex-row flex-col text-center">
-            <Link className=" m-4 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-gray-100 after:w-0 hover:after:w-full after:transition-all after:duration-150  " href="/projects">Check out my work</Link>
-            <Link className="m-4 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-gray-100 after:w-0 hover:after:w-full after:transition-all after:duration-150 " href="contact-me">Contact me</Link>
+            <Link className=" m-4 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-blue-400 after:w-0 hover:after:w-full after:transition-all after:duration-150  text-blue-500 hover:text-blue-400" href="/projects">Check out my work</Link>
+            <Link className="m-4 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-blue-400 after:w-0 hover:after:w-full after:transition-all after:duration-150 text-blue-500 hover:text-blue-400" href="contact-me">Contact me</Link>
           </div>          
       </div>
     </div>
