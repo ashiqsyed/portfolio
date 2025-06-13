@@ -2,12 +2,16 @@
 
 import Link from "next/link";
 import {TypeAnimation} from 'react-type-animation';
+import { Bebas_Neue } from "next/font/google";
 import './globals.css'
-
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400"
+});
 
 export default function Home() {
   return (
-    <div className="bg-gray-900 w-full min-h-screen flex items-center justify-center">
+    <div className={`bg-gray-900 w-full min-h-screen flex items-center justify-center `}>
       <div className="text-gray-100 w-1/2 h-1/2 flex flex-col items-center">
           <div className="text-2xl mb-4">Hello, I'm</div>          
           <div className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center sm:h-32">
@@ -15,7 +19,8 @@ export default function Home() {
               sequence={[
                 'Ashiq Syed',
                 1000, 
-
+                '',
+                50
               ]}
               wrapper="span"
               speed={50}

@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 const axios = require("axios");
 
 export default function ContactMe() {
@@ -37,11 +39,11 @@ export default function ContactMe() {
             setSenderEmail("");
             setMessage("");
             axios.post("http://localhost:3000/api/send", JSON.stringify({fullName, senderEmail, message}))
-            .then((res) => {
+            .then((res: any) => {
                 console.log(res.data)
                 alert("Message successfully sent!")
             })
-            .catch((err) => {
+            .catch((err: any) => {
                 console.log(err);
                 alert("There was an error sending the message");
             });
@@ -71,7 +73,7 @@ export default function ContactMe() {
                                 
                             />
                         </h1>
-                        <p className="text-sm">Please feel free to reach out and send me a message, or connect with me on <Link href="https://www.linkedin.com/in/ashiq-syed-b88579239" target="_blank" className="underline text-blue-500 hover:text-blue-400">Linkedin</Link></p>
+                        <p className="text-sm">Please feel free to reach out and send me a message or connect with me on Linkedin!</p>
                     </div>
                     
                     <form onSubmit={handleSubmit} className="w-full h-10/12 flex items-center flex-col">
@@ -88,8 +90,16 @@ export default function ContactMe() {
                                 <label htmlFor="message" className="w-full h-1/12">Message</label>
                                 <Textarea onChange={handleMessageChange} id="message" placeholder="Type your message here..." className="h-10/12" value={message}/>
                             </div>
-                            <div className=" mt-2 mb-4 w-full h-1/6">
+                            <div className=" mt-2 mb-4 w-full h-1/6 flex items-center justify-between ">
                                 <Button className="bg-blue-500 hover:bg-blue-400">Send Message</Button>
+                                <div className="flex  h-full items-center justify-evenly sm:w-1/4 w-1/3">
+                                    <Link href="https://www.linkedin.com/in/ashiq-syed-b88579239/" className="sm:w-1/2 h-full w-3/4 flex items-center justify-center hover:shadow-[3px_3px_3px_rgba(255,255,255,0.4)] transition-all duration-150 ease-in-out" target="_blank">
+                                        <FaLinkedin className="h-full  w-full sm:w-3/4" />
+                                    </Link>
+                                    <Link href="https://github.com/ashiqsyed" className="sm:w-1/2 w-3/4 h-full flex items-center justify-center hover:shadow-[3px_3px_3px_rgba(255,255,255,0.4)] transition-all duration-150 ease-in-out" target="_blank">
+                                        <FaGithub className=" h-full w-full sm:3/4"/>
+                                    </Link>
+                                </div>
                             </div>
                         
                         

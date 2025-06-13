@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Fjalla_One, Saira} from "next/font/google";
+
 import './globals.css';
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,6 +15,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const bebasNeue = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400"
+});
+const fjallaOne = Fjalla_One({
+  subsets: ['latin'],
+  weight: "400"
+})
+const saira = Saira({
+  subsets: ['latin'],
+  weight: '400'
+})
 export const metadata: Metadata = {
   title: "Ashiq Syed",
   description: "Personal website showcasing my skills",
@@ -27,7 +40,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${saira.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar />
         {children}

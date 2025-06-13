@@ -4,6 +4,7 @@ import Link from "next/link"
 export default function Projects() {
     return (
         <div className="bg-gray-900 text-gray-100 flex items-center justify-evenly flex-col min-h-screen">
+                    <h1 className=" text-4xl w-full sm:h-16 sm:w-1/2 flex items-center sm:text-left sm:justify-normal justify-center">Projects</h1>
                     {/* project card */}
                     <Link href="https://github.com/ashiqsyed/Cost-Settler" target="_blank" className="sm:w-1/2 rounded-xl sm:h-64 sm:ml-8 sm:mr-8 sm:mt-8 sm:mb-4 mt-4 ml-4 mr-4 mb-10 transition-all duration-150 hover:shadow-[8px_8px_8px_rgba(255,255,255,0.4)]">
                         <Card className="w-full sm:h-full">
