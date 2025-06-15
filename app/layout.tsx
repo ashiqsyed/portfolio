@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Bebas_Neue, Fjalla_One, Saira} from "next/font/google";
+import { Geist, Geist_Mono,  Saira} from "next/font/google";
 
 import './globals.css';
 import Navbar from "../components/Navbar";
@@ -15,14 +15,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const bebasNeue = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400"
-});
-const fjallaOne = Fjalla_One({
-  subsets: ['latin'],
-  weight: "400"
-})
+
 const saira = Saira({
   subsets: ['latin'],
   weight: '400'

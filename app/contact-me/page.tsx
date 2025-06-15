@@ -8,27 +8,29 @@ import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
-const axios = require("axios");
+import axios, { AxiosResponse } from 'axios';
+
+
 
 export default function ContactMe() {
     const [fullName, setFullName] = useState<string>("");
     const [senderEmail, setSenderEmail] = useState<string>("");
     const [message, setMessage] = useState<string>("");
 
-    const handleFullNameChange = (e: any) => {
+    const handleFullNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFullName(e.target.value);
     }
     
-    const handleSenderEmailChange = (e: any) => {
+    const handleSenderEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setSenderEmail(e.target.value);
     }
 
-    const handleMessageChange = (e: any) => {
+    const handleMessageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setMessage(e.target.value);
     }
 
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
         e.preventDefault();
         if (fullName == '' || senderEmail == '' || message == '') {
             alert("Fill out the whole form")
@@ -38,11 +40,11 @@ export default function ContactMe() {
             setSenderEmail("");
             setMessage("");
             axios.post("http://localhost:3000/api/send", JSON.stringify({fullName, senderEmail, message}))
-            .then((res: any) => {
+            .then((res: AxiosResponse) => {
                 console.log(res.data)
                 alert("Message successfully sent!")
             })
-            .catch((err: any) => {
+            .catch((err: AxiosResponse) => {
                 console.log(err);
                 alert("There was an error sending the message");
             });

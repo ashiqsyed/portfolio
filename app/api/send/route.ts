@@ -26,9 +26,10 @@ export async function POST(request: Request) {
             from: 'Acme <onboarding@resend.dev>',
             to: [`${email}`],
             subject: `Message from ${fullName} (${senderEmail})`,
-            react: EmailTemplate({fullName, senderEmail, message})            
+            react: await EmailTemplate({fullName, senderEmail, message}) 
+            
         });
-
+        console.log(data);
         if (error) {
             return NextResponse.json({
                     "msg": "Error sending email"
@@ -39,6 +40,7 @@ export async function POST(request: Request) {
             "msg": "Successfully sent email"
         });
     } catch (error) {
+        console.log(error);
         return NextResponse.json({
             "msg": "There was an error"
         })

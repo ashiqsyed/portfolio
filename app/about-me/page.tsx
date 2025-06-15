@@ -21,7 +21,7 @@ export default function AboutMe() {
                     </div>
                     <div className="sm:w-1/3 flex flex-col sm:text-left items-center justify-center m-2 md:max-xl:w-1/2 md:max-xl:text-center">
                         <h1 className="text-3xl w-full">About Me</h1>
-                        <p className="w-full text-gray-400">I'm a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons.</p>                                     
+                        <p className="w-full text-gray-400">I&apos;m a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons.</p>                                     
                         <p className="w-full text-gray-400">While I structured my coursework around software engineering, I also developed an interest in other fields of computer science - such as data, cybersecurity, and IT - through other courses and am open to roles across the field, where I can continue to learn, grow, and contribute.</p>
                     </div>
                     <div className="sm:w-1/3 md:max-xl:w-1/2 h-full flex items-center justify-center">
