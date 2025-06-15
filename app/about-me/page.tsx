@@ -63,7 +63,7 @@ export default function AboutMe() {
                                     src="/ny3.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="NY3"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
@@ -72,7 +72,7 @@ export default function AboutMe() {
                                     src="/ny4.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="NY4"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
@@ -81,7 +81,7 @@ export default function AboutMe() {
                                     src="/bos1.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="BOS1"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
@@ -90,7 +90,7 @@ export default function AboutMe() {
                                     src="/bos2.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="BOS2"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
@@ -99,7 +99,7 @@ export default function AboutMe() {
                                     src="/la1.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="LA1"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
@@ -108,7 +108,7 @@ export default function AboutMe() {
                                     src="/sf1.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="SF1"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
@@ -117,7 +117,7 @@ export default function AboutMe() {
                                     src="/sm1.jpg"
                                     width={400}
                                     height={400}
-                                    alt="UGA Hacks 2025"
+                                    alt="SM1"
                                     className="border-[#374151] border-3 rounded-xl"
                                 />
                             </CarouselItem>
