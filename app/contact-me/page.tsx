@@ -30,8 +30,8 @@ export default function ContactMe() {
     }
 
 
-    const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
-        e.preventDefault();
+    const handleSubmit = () => {
+        
         if (fullName == '' || senderEmail == '' || message == '') {
             alert("Fill out the whole form")
         } else {
