@@ -39,7 +39,7 @@ export default function ContactMe() {
             setFullName("");
             setSenderEmail("");
             setMessage("");
-            axios.post("https://portfolio-uvzt.vercel.app//api/send", JSON.stringify({fullName, senderEmail, message}))
+            axios.post("https://portfolio-uvzt.vercel.app/api/send", JSON.stringify({fullName, senderEmail, message}))
             .then((res: AxiosResponse) => {
                 console.log(res.data)
                 alert("Message successfully sent!")
