@@ -51,7 +51,7 @@ export default function AboutMe() {
                         <CarouselContent>                            
                             <CarouselItem>
                                 <Image 
-                                    src="/ny1.jpg"
+                                    src="/ny1.JPG"
                                     width={400}
                                     height={400}
                                     alt="UGA Hacks 2025"
@@ -60,7 +60,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/ny3.jpg"
+                                    src="/ny3.JPG"
                                     width={400}
                                     height={400}
                                     alt="NY3"
@@ -69,7 +69,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/ny4.jpg"
+                                    src="/ny4.JPG"
                                     width={400}
                                     height={400}
                                     alt="NY4"
@@ -78,7 +78,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/bos1.jpg"
+                                    src="/bos1.JPG"
                                     width={400}
                                     height={400}
                                     alt="BOS1"
@@ -87,7 +87,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/bos2.jpg"
+                                    src="/bos2.JPG"
                                     width={400}
                                     height={400}
                                     alt="BOS2"
@@ -96,7 +96,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/la1.jpg"
+                                    src="/la1.JPG"
                                     width={400}
                                     height={400}
                                     alt="LA1"
@@ -105,7 +105,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/sf1.jpg"
+                                    src="/sf1.JPG"
                                     width={400}
                                     height={400}
                                     alt="SF1"
@@ -114,7 +114,7 @@ export default function AboutMe() {
                             </CarouselItem>
                             <CarouselItem>
                                 <Image 
-                                    src="/sm1.jpg"
+                                    src="/sm1.JPG"
                                     width={400}
                                     height={400}
                                     alt="SM1"
