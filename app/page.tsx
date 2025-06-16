@@ -10,14 +10,14 @@ export default function Home() {
   return (
     <div className={`bg-gray-900 w-full min-h-screen flex items-center justify-center `}>
       <div className="text-gray-100 w-1/2 h-1/2 flex flex-col items-center">
-          <div className="text-2xl mb-4">Hello, I&apos;m</div>          
-          <div className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center sm:h-32">
+          <div className="text-2xl mb-4 mt-6 sm:mt-0 w-full text-center ">Hello, I&apos;m</div>          
+          <div className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center sm:h-32 text-shadow-[25px_25px_25px_rgba(59,130,246,1.0))]">
             <TypeAnimation 
               sequence={[
                 'Ashiq Syed',
-                1000, 
+                3000, 
                 '',
-                50
+                500
               ]}
               wrapper="span"
               speed={50}

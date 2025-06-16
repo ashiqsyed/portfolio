@@ -29,7 +29,6 @@ export default function ContactMe() {
         setMessage(e.target.value);
     }
 
-
     const handleSubmit = () => {
         
         if (fullName == '' || senderEmail == '' || message == '') {
@@ -53,13 +52,9 @@ export default function ContactMe() {
             
 
         }
-        
-
-
-        
     }
     return (
-        <div className="bg-gray-900 text-white h-screen min-h-screen w-full flex items-center justify-center">
+        <div className="bg-gray-900 text-white h-screen min-h-screen w-full flex items-center justify-center p-4">
             <Card className="sm:h-1/2 sm:w-1/3 p-4 m-4 md:max-xl:w-3/4 ">
                 <CardContent className="h-full w-full">
                     <div className="w-full h-2/12 ">
