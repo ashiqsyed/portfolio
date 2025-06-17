@@ -2,34 +2,39 @@
 
 import Link from "next/link";
 import {TypeAnimation} from 'react-type-animation';
-
+import {motion} from 'motion/react'
 import './globals.css'
-
-
+import { TextEffect } from "@/components/motion-primitives/text-effect";
+import { useRouter } from "next/navigation";
+import { BackgroundBeams } from "@/components/aceternity-ui/background-beams";
+import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Boxes } from "@/components/ui/background-boxes";
 export default function Home() {
+  const router = useRouter()
   return (
-    <div className={`bg-gray-900 w-full min-h-screen flex items-center justify-center `}>
-      <div className="text-gray-100 w-1/2 h-1/2 flex flex-col items-center">
-          <div className="text-2xl mb-4 mt-6 sm:mt-0 w-full text-center ">Hello, I&apos;m</div>          
-          <div className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center sm:h-32 text-shadow-[25px_25px_25px_rgba(59,130,246,1.0))]">
-            <TypeAnimation 
-              sequence={[
-                'Ashiq Syed',
-                3000, 
-                '',
-                500
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
-          </div>
-          <div className="text-3xl text-center mt-4 mb-4">Recent computer science graduate from the University of Georgia</div>
-          <div className=" w-3/4 flex items-center justify-around text-3xl mt-4 sm:flex-row flex-col text-center">
-            <Link className=" m-4 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-blue-400 after:w-0 hover:after:w-full after:transition-all after:duration-150  text-blue-500 hover:text-blue-400" href="/projects">Check out my work</Link>
-            <Link className="m-4 relative after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:bg-blue-400 after:w-0 hover:after:w-full after:transition-all after:duration-150 text-blue-500 hover:text-blue-400" href="contact-me">Contact me</Link>
-          </div>          
+   
+      <div className=" w-full min-h-screen sm:h-screen flex items-center justify-center"> 
+        <div className="text-gray-100 sm:w-1/2 w-3/4 h-1/2 flex flex-col items-center  justify-center">
+            <TextEffect className="text-2xl mb-4 mt-6 sm:mt-0 w-full text-center " per="line" preset="fade-in-blur" speedReveal={0.6} >
+              Hello, I&apos;m
+            </TextEffect>
+            <TextEffect className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center w-full sm:h-32 text-shadow-[10px_10px_10px_rgba(59,130,246,10)]" per="char" speedSegment={0.25} preset="slide" delay={1}>
+              Ashiq Syed
+            </TextEffect>
+            <TextEffect className="text-3xl text-center my-4" per="line" speedSegment={0.75} delay={2} preset="fade-in-blur">
+              Recent computer science graduate from the University of Georgia
+            </TextEffect>
+            <div className="w-full flex items-center justify-around text-xl flex-row  text-center h-1/4">
+              <motion.button className="sm:w-1/3 h-1/4 border border-blue-500 rounded-full text-blue-500 sm:p-6 p-3 cursor-pointer flex items-center justify-center text-center" onClick={() => router.push("/projects")} whileHover={{scale: 1.25, borderColor: "rgb(96,165,250)"}} whileTap={{ backgroundColor: "rgb(96,165,250)", color: "rgb(243,244,246)"}}>
+                My projects
+              </motion.button>
+              <motion.button className="sm:w-1/3 h-1/4 border border-blue-500 rounded-full text-blue-500 sm:p-6 p-3 cursor-pointer flex items-center justify-center text-center" onClick={() => router.push("/contact-me")} whileHover={{scale: 1.25, borderColor: "rgb(96,165,250)"}} whileTap={{ backgroundColor: "rgb(96,165,250)", color: "rgb(243,244,246)"}}>
+                Contact Me
+              </motion.button>
+            </div>          
       </div>
-    </div>
+      </div>
+      
+    
   );
 }

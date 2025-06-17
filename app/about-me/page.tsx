@@ -3,10 +3,14 @@
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 
 import Image from 'next/image'
+import { TextEffect } from "@/components/motion-primitives/text-effect";
+import { BackgroundBeams } from "@/components/aceternity-ui/background-beams";
 export default function AboutMe() {
     
     return (
-        <div className="bg-gray-900 text-gray-100 flex items-center justify-center flex-col min-h-screen p-4">
+        <div className=" text-gray-100 flex items-center justify-center flex-col min-h-screen p-4">
+            
+
             <div className="w-3/4 flex flex-col items-center">
             {/* first third */}
                 <div className="w-full sm:flex sm:m-8 sm:p-8 m-4 p-4 flex-col sm:flex-row items-center justify-center text-center  ">
@@ -20,9 +24,18 @@ export default function AboutMe() {
                         />
                     </div>
                     <div className="sm:w-1/3 flex flex-col sm:text-left items-center justify-center m-2 md:max-xl:w-1/2 md:max-xl:text-center">
-                        <h1 className="text-3xl w-full">About Me</h1>
-                        <p className="w-full text-gray-400 mt-2 mb-1 text-xl">I&apos;m a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons.</p>                                     
-                        <p className="w-full text-gray-400 mt-1 mb-2 text-xl">While I structured my coursework around software engineering, I also developed an interest in other fields of computer science - such as data, cybersecurity, and IT - through other courses and am open to roles across the field, where I can continue to learn, grow, and contribute.</p>
+                        <TextEffect per="char" className="text-3xl w-full">
+                            About Me
+                        </TextEffect>
+                        <TextEffect per="line" className="w-full text-gray-400 mt-2 mb-1 text-xl" delay={1}>
+                            {`I'm a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons. 
+While I structured my coursework around software engineering, I also developed an interest in other fields of computer science - such as data, cybersecurity, and IT - through other courses and am open to roles across the field, where I can continue to learn, grow, and contribute.`
+                            }
+                        </TextEffect>
+
+                        {/* <p className="w-full text-gray-400 mt-2 mb-1 text-xl">I&apos;m a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons.</p>                                     
+                        <p className="w-full text-gray-400 mt-1 mb-2 text-xl">While I structured my coursework around software engineering, I also developed an interest in other fields of computer science - such as data, cybersecurity, and IT - through other courses and am open to roles across the field, where I can continue to learn, grow, and contribute.</p> */}
+                        
                     </div>
                     <div className="sm:w-1/3 md:max-xl:w-1/2 h-full flex items-center justify-center">
                         <Image 
@@ -133,6 +146,8 @@ export default function AboutMe() {
                     <iframe className="sm:w-1/2" src="https://open.spotify.com/embed/playlist/1tgoewEoIaoLZHfVxi3Upz?utm_source=generator" width="100%" height="352"  allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
             </div>
+            
+            
             
             
         </div>

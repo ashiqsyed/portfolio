@@ -54,7 +54,7 @@ export default function ContactMe() {
         }
     }
     return (
-        <div className="bg-gray-900 text-white h-screen min-h-screen w-full flex items-center justify-center p-4">
+        <div className=" text-gray-100 h-screen min-h-screen w-full flex items-center justify-center p-4">
             <Card className="sm:h-1/2 sm:w-1/3 p-4 m-4 md:max-xl:w-3/4 ">
                 <CardContent className="h-full w-full">
                     <div className="w-full h-2/12 ">
@@ -76,16 +76,16 @@ export default function ContactMe() {
                         
                             <div className="my-2 w-full h-1/6">
                                 <label htmlFor="fullName" className="text-gray-400">Full Name</label>
-                                <Input type="text" id="fullName" onChange={handleFullNameChange} value={fullName} />
+                                <Input type="text" id="fullName" onChange={handleFullNameChange} value={fullName} className="text-white" />
                             </div>
                             <div className="my-2 w-full h-1/6">
                                 <label htmlFor="email" className="text-gray-400">Email</label>
-                                <Input type="email" id="email" onChange={handleSenderEmailChange} value={senderEmail}/>
+                                <Input type="email" id="email" onChange={handleSenderEmailChange} value={senderEmail} className="text-white"/>
                             </div>
                             <div className="my-2 w-full h-1/6 ">
                                 <label htmlFor="message" className="w-full h-1/12 text-gray-400">Message</label>
-                                {/* <Textarea onChange={handleMessageChange} id="message" placeholder="Type your message here..." className="h-10/12 max-h-10/12 w0f" value={message}/> */}
-                                <Input type="text" onChange={handleMessageChange} id="message" placeholder="Type your message here..." className="" value={message}/>
+                                
+                                <Input type="text" onChange={handleMessageChange} id="message" placeholder="Type your message here..." className="" value={message} className="text-white"/>
                             </div>
                             <div className=" my-2 w-full h-1/6 flex items-center justify-between ">
                                 <Button className="bg-blue-500 hover:bg-blue-400">Send Message</Button>

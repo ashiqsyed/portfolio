@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin, FaExternalLinkAlt } from "react-icons/fa";
 const Footer = () => {
     return (
-        <div className="sm:h-16 h-36 w-full flex text-gray-400 bg-gray-800 text-lg flex-col justify-betwen  sm:flex-row  p-4 sm:pl-0">
+        <div className="sm:h-16 h-36 w-full flex text-gray-400  text-lg flex-col justify-betwen  sm:flex-row  p-4 sm:pl-0">
             {/* github, resume, linkedin */}
             <div className="h-full w-1/2 sm:w-1/2">
                 <ul className="flex w-full h-full items-center justify-evenly flex-col sm:flex-row ">
