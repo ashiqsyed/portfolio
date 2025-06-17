@@ -5,7 +5,7 @@ import './globals.css';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { BackgroundBeams } from "@/components/aceternity-ui/background-beams";
-import { AuroraBackground } from "@/components/ui/aurora-background";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

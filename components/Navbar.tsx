@@ -37,7 +37,7 @@ const Navbar = () => {
         }
     }
     return (
-        <nav className="h-16 w-full min-w-screen flex items-center justify-between text-gray-100 bg-gray-900/5 sticky top-0 left-0 z-5">
+        <nav className="h-16 w-full min-w-screen flex items-center justify-between text-gray-100 bg-gray-900/25 sticky top-0 left-0 z-5">
             <div className="flex items-center justify-center text-center  h-full w-1/4 text-3xl cursor-pointer " onClick={handleNameClick}>ashiq syed</div>
             <div className="flex items-center justify-around text-center  h-full w-1/2 text-xl invisible sm:visible ">
                 {page === 'about' ? 

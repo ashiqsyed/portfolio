@@ -85,7 +85,7 @@ export default function ContactMe() {
                             <div className="my-2 w-full h-1/6 ">
                                 <label htmlFor="message" className="w-full h-1/12 text-gray-400">Message</label>
                                 
-                                <Input type="text" onChange={handleMessageChange} id="message" placeholder="Type your message here..." className="" value={message} className="text-white"/>
+                                <Input type="text" onChange={handleMessageChange} id="message" placeholder="Type your message here..." value={message} className="text-white"/>
                             </div>
                             <div className=" my-2 w-full h-1/6 flex items-center justify-between ">
                                 <Button className="bg-blue-500 hover:bg-blue-400">Send Message</Button>
