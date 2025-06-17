@@ -1,6 +1,7 @@
 "use server"
 
 import {EmailTemplate} from "../../../components/EmailTemplate"
+import { EmailToTemplate } from "@/components/EmailToTemplate";
 import {Resend} from 'resend'
 import { NextResponse } from 'next/server';
 
@@ -27,8 +28,8 @@ export async function POST(request: Request) {
             to: [`${email}`],
             subject: `Message from ${fullName} (${senderEmail})`,
             react: await EmailTemplate({fullName, senderEmail, message}) 
-            
         });
+        
         console.log(data);
         if (error) {
             return NextResponse.json({
