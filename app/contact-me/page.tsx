@@ -58,7 +58,7 @@ export default function ContactMe() {
             <Card className="sm:h-1/2 sm:w-1/3 p-4 m-4 md:max-xl:w-3/4 ">
                 <CardContent className="h-full w-full">
                     <div className="w-full h-2/12 ">
-                        <h1 className="text-2xl">
+                        <h1 className="text-2xl text-shadow-[4px_4px_4px_rgba(59,130,246,10)]">
                             <TypeAnimation 
                                 sequence={[
                                     'Contact Me',
@@ -76,11 +76,11 @@ export default function ContactMe() {
                         
                             <div className="my-2 w-full h-1/6">
                                 <label htmlFor="fullName" className="text-gray-400">Full Name</label>
-                                <Input type="text" id="fullName" onChange={handleFullNameChange} value={fullName} className="text-white" />
+                                <Input type="text" id="fullName" onChange={handleFullNameChange} value={fullName} className="text-white" placeholder="Full Name" />
                             </div>
                             <div className="my-2 w-full h-1/6">
                                 <label htmlFor="email" className="text-gray-400">Email</label>
-                                <Input type="email" id="email" onChange={handleSenderEmailChange} value={senderEmail} className="text-white"/>
+                                <Input type="email" id="email" onChange={handleSenderEmailChange} value={senderEmail} className="text-white" placeholder="fullname@gmail.com"/>
                             </div>
                             <div className="my-2 w-full h-1/6 ">
                                 <label htmlFor="message" className="w-full h-1/12 text-gray-400">Message</label>

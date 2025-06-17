@@ -4,7 +4,7 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 
 import Image from 'next/image'
 import { TextEffect } from "@/components/motion-primitives/text-effect";
-import { BackgroundBeams } from "@/components/aceternity-ui/background-beams";
+
 export default function AboutMe() {
     
     return (
@@ -23,14 +23,14 @@ export default function AboutMe() {
                             className="border-[#374151] border-3 rounded-xl"
                         />
                     </div>
-                    <div className="sm:w-1/3 flex flex-col sm:text-left items-center justify-center m-2 md:max-xl:w-1/2 md:max-xl:text-center">
-                        <TextEffect per="char" className="text-3xl w-full">
+                    <div className="sm:w-1/3 flex flex-col sm:text-left items-center justify-center m-2 md:max-xl:w-1/2 md:max-xl:text-center ">
+                        <TextEffect per="char" preset="slide" className="text-3xl w-full text-shadow-[4px_4px_4px_rgba(59,130,246,10)]">
                             About Me
                         </TextEffect>
                         <TextEffect per="line" className="w-full text-gray-400 mt-2 mb-1 text-xl" delay={1}>
                             {`I'm a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons. 
 While I structured my coursework around software engineering, I also developed an interest in other fields of computer science - such as data, cybersecurity, and IT - through other courses and am open to roles across the field, where I can continue to learn, grow, and contribute.`
-                            }
+}
                         </TextEffect>
 
                         {/* <p className="w-full text-gray-400 mt-2 mb-1 text-xl">I&apos;m a recent Computer Science graduate from the University of Georgia with a background in software engineering, having strengthened my skills through coursework and by participating in hackathons.</p>                                     
@@ -52,9 +52,14 @@ While I structured my coursework around software engineering, I also developed a
                 <div className="w-full flex sm:m-8 sm:p-8 m-2 p-4 sm:flex-row flex-col">
                     <div className="sm:w-2/3 flex justify-center items-center text-center sm:text-left text-gray-400">
                         <div className="text-xl">
-                            <p className="w-full mb-2 ">I now stay active by working on personal projects, learning about new technologies and expanding my skills.</p>
-                            <p className="w-full mt-1 mb-1">I am currently seeking a full-time entry-level position or internship where I am able to make an impact.</p>
-                            <p className="w-full mt-1 mb-2"> Aside from programming, I enjoy playing guitar, going to the gym, traveling, and playing video games. I have gotten more into bouldering and cooking. I also enjoy discovering new types of music and expanding my taste.</p>
+                            <TextEffect per="line" delay={2}>
+                                {`I now stay active by working on personal projects, learning about new technologies and expanding my skills.
+I am currently seeking a full-time entry-level position or internship where I am able to make an impact.
+Aside from programming, I enjoy playing guitar, going to the gym, traveling, and playing video games. I have gotten more into bouldering and cooking. I also enjoy discovering new types of music and expanding my taste.`}
+                            </TextEffect>
+                            {/* <p className="w-full mb-2 "></p>
+                            <p className="w-full mt-1 mb-1"></p>
+                            <p className="w-full mt-1 mb-2"> </p> */}
                         </div>
                         {/* include the last few pictures here maybe? */}
                         

@@ -37,7 +37,7 @@ const Navbar = () => {
         }
     }
     return (
-        <nav className="h-16 w-full min-w-screen flex items-center justify-between text-gray-100 bg-gray-900/25 sticky top-0 left-0 ">
+        <nav className="h-16 w-full min-w-screen flex items-center justify-between text-gray-100 bg-gray-900/5 sticky top-0 left-0 z-5">
             <div className="flex items-center justify-center text-center  h-full w-1/4 text-3xl cursor-pointer " onClick={handleNameClick}>ashiq syed</div>
             <div className="flex items-center justify-around text-center  h-full w-1/2 text-xl invisible sm:visible ">
                 {page === 'about' ? 
@@ -86,7 +86,7 @@ const Navbar = () => {
             {
                 isOpen 
                 ? 
-                    <div className="sm:hidden flex w-1/3 h-full min-h-screen items-center flex-col fixed top-0 right-0 bg-gray-800 " >
+                    <div className="sm:hidden flex w-1/3 h-full min-h-screen items-center flex-col fixed top-0 right-0 bg-gray-800/5 " >
                         <IoClose className="w-1/2 h-auto " onClick={() => setIsOpen(!isOpen)}/>
                         <div className="flex flex-col w-full h-screen  items-center justify-center">
                             {page === 'about' ? <div className="w-full h-1/12  flex items-center justify-center bg-gray-500" onClick={handleAboutClick}>about</div> : <div className="w-full h-1/12  flex items-center justify-center" onClick={handleAboutClick}>about</div>}

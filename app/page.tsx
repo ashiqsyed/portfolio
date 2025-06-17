@@ -1,24 +1,18 @@
 "use client"
-
-import Link from "next/link";
-import {TypeAnimation} from 'react-type-animation';
 import {motion} from 'motion/react'
 import './globals.css'
 import { TextEffect } from "@/components/motion-primitives/text-effect";
 import { useRouter } from "next/navigation";
-import { BackgroundBeams } from "@/components/aceternity-ui/background-beams";
-import { AuroraBackground } from "@/components/ui/aurora-background";
-import { Boxes } from "@/components/ui/background-boxes";
 export default function Home() {
   const router = useRouter()
   return (
-   
       <div className=" w-full min-h-screen sm:h-screen flex items-center justify-center"> 
+        
         <div className="text-gray-100 sm:w-1/2 w-3/4 h-1/2 flex flex-col items-center  justify-center">
             <TextEffect className="text-2xl mb-4 mt-6 sm:mt-0 w-full text-center " per="line" preset="fade-in-blur" speedReveal={0.6} >
               Hello, I&apos;m
             </TextEffect>
-            <TextEffect className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center w-full sm:h-32 text-shadow-[10px_10px_10px_rgba(59,130,246,10)]" per="char" speedSegment={0.25} preset="slide" delay={1}>
+            <TextEffect className="text-6xl mt-4 mb-4 h-48 flex items-center justify-center text-center w-full sm:h-32 text-shadow-[7px_7px_7px_rgba(59,130,246,10)]" per="char" speedSegment={0.25} preset="slide" delay={1}>
               Ashiq Syed
             </TextEffect>
             <TextEffect className="text-3xl text-center my-4" per="line" speedSegment={0.75} delay={2} preset="fade-in-blur">
