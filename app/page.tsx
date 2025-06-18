@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter()
   return (
-      <div className=" w-full min-h-screen sm:h-screen flex items-center justify-center"> 
+      <div className=" w-full py-32 flex items-center justify-center"> 
         
         <div className="text-gray-100 sm:w-1/2 w-3/4 h-1/2 flex flex-col items-center  justify-center">
             <TextEffect className="text-2xl mb-4 mt-6 sm:mt-0 w-full text-center " per="line" preset="fade-in-blur" speedReveal={0.6} >

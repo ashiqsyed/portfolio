@@ -37,15 +37,14 @@ const Navbar = () => {
         }
     }
     return (
-        <nav className="h-16 w-full min-w-screen flex items-center justify-between text-gray-100 bg-gray-900/25 sticky top-0 left-0 z-5">
+        <nav className="h-16 w-full min-w-screen flex items-center justify-between text-gray-100 bg-gray-900/25 sticky top-0 left-0 z-10">
             <div className="flex items-center justify-center text-center  h-full w-1/4 text-3xl cursor-pointer " onClick={handleNameClick}>ashiq syed</div>
-            <div className="flex items-center justify-around text-center  h-full w-1/2 text-xl invisible sm:visible ">
+            <div className="sm:flex items-center justify-around text-center  h-full w-1/2 text-xl hidden ">
                 {page === 'about' ? 
                     <div className="h-full w-1/3 flex items-center justify-center cursor-pointer">
                         <div className="text-blue-400 cursor-pointer" onClick={handleAboutClick}>
                             about
                         </div>
-                        
                     </div> 
                     : 
                     <div className="h-full w-1/3 flex items-center justify-center " >
@@ -81,23 +80,34 @@ const Navbar = () => {
                         </div>
                         
                     </div> }                   
-            </div>
-            
+            </div>         
             {
                 isOpen 
                 ? 
-                    <div className="sm:hidden flex w-1/3 h-full min-h-screen items-center flex-col fixed top-0 right-0 bg-gray-800/5 " >
-                        <IoClose className="w-1/2 h-auto " onClick={() => setIsOpen(!isOpen)}/>
-                        <div className="flex flex-col w-full h-screen  items-center justify-center">
-                            {page === 'about' ? <div className="w-full h-1/12  flex items-center justify-center bg-gray-500" onClick={handleAboutClick}>about</div> : <div className="w-full h-1/12  flex items-center justify-center" onClick={handleAboutClick}>about</div>}
-                            {page === 'projects' ? <div className="w-full h-1/12 bg-gray-500 flex items-center justify-center" onClick={handleProjectsClick}>projects</div> : <div className="w-full h-1/12  flex items-center justify-center" onClick={handleProjectsClick}>projects</div>}
-                            {page === 'contact' ? <div className="w-full h-1/12  bg-gray-500 flex items-center justify-center" onClick={handleContactClick}>contact</div> : <div className="w-full h-1/12  flex items-center justify-center" onClick={handleContactClick}>contact</div>}
+                    <div className="sm:hidden flex w-screen   items-center flex-col fixed top-0 right-0 bg-gray-900/85 " >
+                        
+                        <div className="w-full flex items-center justify-between h-16">
+                            <div className="flex items-center justify-center text-center h-full w-1/4 text-3xl cursor-pointer" onClick={handleNameClick}>ashiq syed</div>
+                            <div className="flex w-1/3 h-full items-center justify-center">
+                                <IoClose className="w-1/2 h-1/2" onClick={() => setIsOpen(!isOpen)}/>
+                            </div>
                         </div>
+                        <div className="w-full">
+                            <div className="w-full flex items-center justify-center py-3">
+                                {page === 'about' ? <div onClick={handleAboutClick} className="text-blue-400">about</div> : <div onClick={handleAboutClick}>about</div>}                                
+                            </div>
+                            <div className="w-full flex items-center justify-center py-3">
+                                {page === 'projects' ? <div onClick={handleProjectsClick} className="text-blue-400">projects</div> : <div onClick={handleProjectsClick}>projects</div>}                                                                                           
+                            </div>
+                            <div className="w-full flex items-center justify-center py-3"> 
+                                {page === 'contact' ? <div onClick={handleContactClick} className="text-blue-400">contact</div> : <div onClick={handleContactClick}>contact</div>}                                                                                               
+                            </div>
+                        </div>
+                        
                     </div>
                 :
                     <div className="sm:hidden flex w-1/3  h-full items-center justify-center ">
                         <LuMenu className="w-1/2 h-1/2" onClick={() => setIsOpen(!isOpen)}/>
-
                     </div>
             }            
         </nav>

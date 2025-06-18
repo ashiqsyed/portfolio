@@ -1,7 +1,7 @@
 "use server"
 
 import {EmailTemplate} from "../../../components/EmailTemplate"
-import { EmailToTemplate } from "@/components/EmailToTemplate";
+// import { EmailToTemplate } from "@/components/EmailToTemplate";
 import {Resend} from 'resend'
 import { NextResponse } from 'next/server';
 
