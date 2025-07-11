@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="h-full w-1/2 sm:w-1/2">
                 <ul className="flex w-full h-full items-center justify-evenly flex-col sm:flex-row ">
                     <li className=" w-full sm:w-1/6 h-1/3 sm:h-full flex justify-center"><Link href="https://github.com/ashiqsyed" target="_blank" className="w-full h-full flex items-center hover:text-blue-400 transition-all duration-150"><FaGithub className="mr-2"/> github</Link></li>
-                    <li className="w-full h-1/3 sm:w-1/6 sm:h-full flex justify-center"><Link href="https://www.linkedin.com/in/ashiq-syed-b88579239/" target="_blank" className="w-full flex items-center hover:text-blue-400 transition duration-150"><FaLinkedin className="mr-2"/> linkedin</Link></li>
+                    <li className="w-full h-1/3 sm:w-1/6 sm:h-full flex justify-center"><Link href="https://www.linkedin.com/in/ashiqsyed" target="_blank" className="w-full flex items-center hover:text-blue-400 transition duration-150"><FaLinkedin className="mr-2"/> linkedin</Link></li>
                     <li className="w-full h-1/3 sm:w-1/6 sm:h-full flex justify-center"><Link href="/Ashiq_Syed_Resume.pdf" target="_blank" className="w-full  h-full flex items-center hover:text-blue-400 transition duration-150"><FaExternalLinkAlt className="mr-2" /> resume</Link></li>
                 </ul>
             </div>

@@ -6,9 +6,9 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const router = useRouter()
   return (
-      <div className=" w-full py-16 flex items-center justify-center sm:h-[660px]"> 
+      <div className=" w-full sm:py-16  flex justify-center sm:max-2xl:h-[575px]"> 
         
-        <div className="text-gray-100 sm:w-1/2 w-3/4 h-1/2 flex flex-col items-center  justify-center py-16">
+        <div className="text-gray-100 sm:w-1/2 w-3/4 flex flex-col h-full  justify-center sm:py-16 my-24">
             <TextEffect className="text-2xl mb-4 mt-6 sm:mt-0 w-full text-center " per="line" preset="fade-in-blur" speedReveal={0.6} >
               Hello, I&apos;m
             </TextEffect>
@@ -18,7 +18,7 @@ export default function Home() {
             <TextEffect className="text-3xl text-center my-4" per="line" speedSegment={0.75} delay={2} preset="fade-in-blur">
               Recent computer science graduate from the University of Georgia
             </TextEffect>
-            <div className="w-full flex items-center justify-around text-xl flex-row  text-center h-1/4">
+            <div className="w-full flex items-center justify-around text-xl flex-row  text-center h-1/2">
               <motion.button className="sm:w-1/3 h-1/4 border border-blue-500 rounded-full text-blue-500 sm:p-6 p-3 cursor-pointer flex items-center justify-center text-center" onClick={() => router.push("/projects")} whileHover={{scale: 1.25, borderColor: "rgb(96,165,250)"}} whileTap={{ backgroundColor: "rgb(96,165,250)", color: "rgb(243,244,246)"}}>
                 My projects
               </motion.button>
